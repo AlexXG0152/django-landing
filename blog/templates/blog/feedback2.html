@@ -1,0 +1,225 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <head>                
+        <meta charset="utf-8">        
+        <title>БЕЛХИМПРОФСОЮЗ ГРОДНО</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Add your business website description here">
+        <meta name="keywords" content="Add your, business, website, keywords, here">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- favicon -->  
+        <link rel="shortcut icon"  type='image/x-icon' href="{% static 'favicon.ico' %}">
+        <link rel="icon" type='image/x-icon' href="{% static 'favicon.ico' %}">
+
+        <!-- google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900%7CMerriweather:400,400italic,300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+        <!-- Font icons -->
+        <link rel="stylesheet" href="{% static 'css/vendor/elegant-font-icon.css' %}">
+
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.css' %}">        
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">        
+        <link rel="stylesheet" href="{% static 'css/vendor/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'css/vendor/owl.carousel.css' %}">
+        
+
+        <!-- style switcher -->
+        <link rel="stylesheet" href="{% static 'css/vendor/style-switcher.css' %}">
+        <!-- Custom styles for this template -->        
+        <link rel="stylesheet" type="text/css" href="{% static 'css/colors/midnight.css' title='midnight' media='screen'%}">
+
+
+    </head>    
+  <body>
+
+  <div id="wrapper" class="light-simple">
+
+    <!-- logo -->
+    <div class="logo-wrapper">
+      <h1 class="logo"><img src="{% static 'images/ashoka-logo-dark.png' %}" alt="ashoka a responsive minimal multipurpose theme"/> БЕЛХИМПРОФСОЮЗ ГРОДНО </h1>
+    </div>
+    <!-- /logo -->
+
+    <!-- navigatin icon -->
+    <div class="navmenu-open">
+      <a href="javascript:void(0);" id="trigger-navbar">
+        <span class="icon_menu"></span>
+      </a>        
+    </div>
+    <!-- / navigatin icon -->
+        
+        <!-- contact -->
+        <section id="contact" class="row section">
+          <div id="container">
+            <div class="row">
+              <div class="section-info col-md-10 col-md-offset-1 text-center wow fadeInDown">
+                  <h3>Вы НЕ заполнили все поля в форме, поэтому она <strong>не была отправлена</strong></h3>
+                  <ul class="hr">
+                    <li class="hr-line"><span></span></li>
+                    <li class="hr-icon"><i class="icon_mail_alt"></i></li>
+                    <li class="hr-line"><span></span></li>
+                  </ul>
+                  <p>Пожалуйста, внимательно отнеситесь к заполнению формы.</p>
+              </div>            
+            </div>
+
+            <div class="row">
+            {% block content %}
+             <form action="" method="post">
+              {% csrf_token %}  
+              <fieldset id="contactform" class="wow bounce" data-wow-duration="2s" data-wow-delay="0.5s">                
+                <div id="form_result"></div>
+                <div class="row">
+                  <div class="col-md-6 col-md-offset-3">
+                    <input name="name" type="text" id="name" class="form-control" placeholder="Full Name" size="50">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 col-md-offset-3">
+                    <input name="email" type="email" id="email" class="form-control" value="" placeholder="Email" required>
+                  </div>                
+                  <div class="col-md-3">
+                    <input name="phone_number" type="tel" id="phone_number" class="form-control" value="" placeholder="Номер телефона в формате +375 (12) 345 - 67 - 89" min="9" max="13" required>
+                  </div>
+                </div>
+                <div class="row">         
+                  <div class="col-md-6 col-md-offset-3">
+                    <textarea name="message" cols="40" rows="5" id="message" class="form-control" placeholder="Your Message"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">                    
+                      <button type="submit" class="btn btn-default btn-lg" id="submit">SUBMIT</button>
+                      <h1> </h1>
+                  </div>
+                </div>
+              </fieldset>
+           </form>
+          {% endblock %}
+              <!-- </form> <form role="form" method="post">-->
+            </div>
+          </div>
+        </section>
+        <!-- /contact -->
+
+        <!-- footer -->
+        <footer id="footer">
+          <div class="container">
+            <div class="row">
+              <div class="move-up"><a data-scroll href="#home" class="arrow_carrot-2up"></a></div>
+              <div class="footer-logo"><h3 class="text-light">БЕЛХИМПРОФСОЮЗ ГРОДНО</h3></div>
+              <div class="footer-text">Copyright © 2020 <a href="javascript:void(0);">MA</a>. Made with <span class="icon_heart_alt"></span></div>
+            </div>
+          </div>
+        </footer>
+        <!-- /footer -->
+
+    </div> 
+    <!-- /container-fluid -->
+
+    <!-- menu items -->
+    <section id="navbar" class="navbar navbar-hugeinc">      
+      <header>        
+        <a href="javascript:void(0);" class="navbar-close">
+        <span class="icon_close"></span></a>   
+        <div class="nav-logo">          
+          <h1 class="logo"><img src="{% static 'images/ashoka-logo-med.png' %}" alt="logo"/></h1>          
+        </div>
+      </header>
+      <nav>
+        <ul>          
+          <li>
+            <a data-scroll href="#home">
+              <span class="primary">ГЛАВНАЯ</span>
+              <span class="secondary">We are Ashoka</span>
+              <div class="heading-sep"></div>
+            </a>
+          </li>          
+          <li>
+            <a data-scroll href="#about">
+              <span class="primary">О НАС</span>
+              <span class="secondary">Get to know us</span>
+              <div class="heading-sep"></div>
+            </a>
+          </li>
+
+          <li>
+            <a data-scroll href="#team">
+              <span class="primary">НАША КОМАНДА</span> 
+              <span class="secondary">People behind Ashoka</span>
+              <div class="heading-sep"></div>
+            </a>
+          </li>
+          <li>
+            <a data-scroll href="#services">
+              <span class="primary">ПРЕИМУЩЕСТВА ПРОФСОЮЗА</span>              
+              <span class="secondary">Learn how we do</span>
+              <div class="heading-sep"></div>
+            </a>
+          </li>
+          <li>
+            <a data-scroll href="#portfolio">
+              <span class="primary">НАШИ ОРГАНИЗАЦИИ</span>
+              <span class="secondary">See the goods</span>
+              <div class="heading-sep"></div>
+            </a>
+          </li>
+          <li>
+            <a data-scroll href="#contact">
+              <span class="primary">КОНТАКТ</span>
+              <span class="secondary">Get in to</span>              
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- footer -->      
+      <footer>
+        <div class="nav-footer">
+          
+          <ul class="nav-footer-social-icons">
+            <li><a target="_blank" data-scroll href="#"><span class="social_twitter"></span></a></li>
+            <li><a target="_blank" data-scroll href="#"><span class="social_facebook"></span></a></li>
+            <li><a target="_blank" data-scroll href="#"><span class="social_googleplus"></span></a></li>
+            <li><a target="_blank" data-scroll href="#"><span class="social_dribbble"></span></a></li>
+            <li><a target="_blank" data-scroll href="#"><span class="social_linkedin"></span></a></li>
+          </ul>
+          
+          <p class="nav-footer-copy">&copy; MA 2020</p>
+        </div>
+      </footer>
+      <!-- / footer -->
+    </section>
+  </div>
+  <!-- /wrapper -->
+
+      <!-- Scripts -->
+      <script type="text/javascript" src="{% static 'js/vendor/jquery-1.11.0.min.js' %}"></script>        
+      <script type="text/javascript" src="{% static 'js/vendor/modernizr.custom.js' %}"></script>
+
+      <script type="text/javascript" src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/classie.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/respond.js' %}"></script> 
+      <script type="text/javascript" src="{% static 'js/vendor/jquery.counterup.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/waypoints.min.js' %}"></script>  
+      
+      <script type="text/javascript" src="{% static 'js/vendor/smoothscroll.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/jquery.backstretch.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/jquery.backgroundvideo.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/wow.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/detectmobilebrowser.js' %}"></script>  
+      <script type="text/javascript" src="{% static 'js/vendor/owl.carousel.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/imagesloaded.pkgd.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/masonry.pkgd.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/cbpGridGallery.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/vendor/styleswitch.js' %}"></script>
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+      <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+      
+    </body>
+</html>

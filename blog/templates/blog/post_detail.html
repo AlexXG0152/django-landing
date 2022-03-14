@@ -1,0 +1,16 @@
+{% extends 'blog/article.html' %}
+{% load static %}
+
+
+{% block page %}
+	{% block content %}
+    	<div class="post">
+            {% for pos in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+    {% endblock %}
+{% endblock %}
